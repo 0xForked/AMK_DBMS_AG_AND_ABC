@@ -27,7 +27,7 @@ class CreateOrderDetailsTable extends Migration
                 ->onDelete('SET NULL');
             $table->integer('qty_ordered');
             $table->integer('price_each');
-            $table->string('order_line_number');
+            //$table->string('order_line_number');
             $table->timestamps();
         });
     }

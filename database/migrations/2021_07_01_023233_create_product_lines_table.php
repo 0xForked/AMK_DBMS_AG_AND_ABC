@@ -16,8 +16,8 @@ class CreateProductLinesTable extends Migration
         Schema::create('product_lines', function (Blueprint $table) {
             $table->id();
             $table->text('text_description');
-            $table->text('html_description');
-            $table->string('image');
+            $table->text('html_description')->nullable();
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }

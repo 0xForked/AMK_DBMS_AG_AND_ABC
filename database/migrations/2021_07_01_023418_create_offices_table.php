@@ -18,7 +18,7 @@ class CreateOfficesTable extends Migration
             $table->string('city');
             $table->string('phone');
             $table->string('address_line_1');
-            $table->string('address_line_2');
+            $table->string('address_line_2')->nullable();
             $table->string('state');
             $table->string('country');
             $table->string('postal_code');

@@ -15,9 +15,14 @@ class CreatePaymentsTable extends Migration
     {
         Schema::create('payments', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('customer_id')
+//            $table->foreignId('customer_id')
+//                ->nullable()
+//                ->constrained('customers')
+//                ->references('id')
+//                ->onDelete('SET NULL');
+            $table->foreignId('order_id')
                 ->nullable()
-                ->constrained('customers')
+                ->constrained('orders')
                 ->references('id')
                 ->onDelete('SET NULL');
             $table->string('check_number');
